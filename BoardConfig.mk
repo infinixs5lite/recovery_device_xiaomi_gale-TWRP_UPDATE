@@ -202,4 +202,7 @@ SHRP_DARK := true
 SHRP_EXPRESS := true
 
 # Maintainer
-TW_DEVICE_VERSION := NINO
+SHRP_DEVICE_VERSION := NINO
+
+# Flashlight
+SHRP_TORCH_PATH := "/sys/class/leds/flashlight"
