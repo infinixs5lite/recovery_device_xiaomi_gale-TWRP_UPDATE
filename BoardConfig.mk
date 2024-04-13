@@ -201,8 +201,6 @@ SHRP_STATUSBAR_LEFT_PADDING := 40
 SHRP_DARK := true
 SHRP_EXPRESS := true
 
-# Maintainer
-SHRP_DEVICE_VERSION := NINO
-
-# Flashlight
+# Put 0 to disable flashlight
+SHRP_FLASH := 1
 SHRP_TORCH_PATH := "/sys/class/leds/flashlight"
