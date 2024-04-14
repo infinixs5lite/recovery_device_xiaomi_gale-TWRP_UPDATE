@@ -96,3 +96,4 @@ export OF_FLASHLIGHT_ENABLE="1"          # if our kernel for the device doesn't 
 		export | grep "TW_" >> $FOX_BUILD_LOG_FILE
 	fi
 fi
+#
