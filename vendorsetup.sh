@@ -1,14 +1,14 @@
 export TARGET_ARCH="arm64-v8a"
 
 # Some about us
-export FOX_VERSION="R12.1_0_A14"
+export FOX_VERSION="R11.1"
 export OF_MAINTAINER="kelvin"
 
 # Build environment stuffs
 export FOX_BUILD_DEVICE="gale"
 export FOX_VARIANT="A14"
 export FOX_BUILD_TYPE="Unofficial"
-export TW_DEFAULT_LANGUAGE="id"
+export TW_DEFAULT_LANGUAGE="en"
 export OF_DEFAULT_TIMEZONE="WIB+1"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
