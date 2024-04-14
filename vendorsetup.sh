@@ -6,7 +6,7 @@ export OF_MAINTAINER="kelvin"
 
 # Build environment stuffs
 export FOX_BUILD_DEVICE="gale"
-export FOX_VARIANT="HyperOS"
+export FOX_VARIANT="A14"
 export FOX_BUILD_TYPE="Unofficial"
 export TW_DEFAULT_LANGUAGE="id"
 export OF_DEFAULT_TIMEZONE="WIB+1"
