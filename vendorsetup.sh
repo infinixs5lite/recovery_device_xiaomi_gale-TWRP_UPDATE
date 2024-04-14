@@ -1,7 +1,7 @@
 export TARGET_ARCH="arm64-v8a"
 
 # Some about us
-export FOX_VERSION="R12.1_1"
+export FOX_VERSION="R11.1_1"
 export OF_MAINTAINER="kelvin"
 export FOX_BUILD_DEVICE="gale"
 export FOX_BUILD_TYPE="Unofficial"
@@ -76,6 +76,7 @@ export FOX_USE_SED_BINARY=1
 export FOX_ENABLE_APP_MANAGER=1
 export FOX_USE_GREP_BINARY=1
 export FOX_USE_XZ_UTILS=1
+export LC_ALL="C"
 export OF_ENABLE_LPTOOLS=1
 export FOX_ASH_IS_BASH=1
 export FOX_REPLACE_TOOLBOX_GETPROP=1
@@ -87,4 +88,11 @@ export OF_FLASHLIGHT_ENABLE="1"          # if our kernel for the device doesn't 
 # export OF_FL_PATH1=""
 # export OF_FL_PATH2=""
 
-
+# let's see what are our build VARs
+	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
+		export | grep "FOX" >> $FOX_BUILD_LOG_FILE
+		export | grep "OF_" >> $FOX_BUILD_LOG_FILE
+		export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
+		export | grep "TW_" >> $FOX_BUILD_LOG_FILE
+	fi
+fi
