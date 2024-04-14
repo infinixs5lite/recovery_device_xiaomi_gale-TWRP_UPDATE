@@ -10,10 +10,8 @@ DEVICE_PATH := device/xiaomi/gale
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# Cure for "ELF binaries" problems
+# Build hack
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-# Deal with "error: overriding commands for target" problems
 BUILD_BROKEN_DUP_RULES := true
 
 # System As Root
