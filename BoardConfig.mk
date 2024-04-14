@@ -10,6 +10,12 @@ DEVICE_PATH := device/xiaomi/gale
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Cure for "ELF binaries" problems
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+# Deal with "error: overriding commands for target" problems
+BUILD_BROKEN_DUP_RULES := true
+
 # System As Root
 BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
@@ -203,4 +209,4 @@ SHRP_EXPRESS := true
 
 # Put 0 to disable flashlight
 SHRP_FLASH := 1
-SHRP_TORCH_PATH := "/sys/class/leds/flashlight"
+SHRP_TORCH_PATH := "/sys/class/flashlight"
