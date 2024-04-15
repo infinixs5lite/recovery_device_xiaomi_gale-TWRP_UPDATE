@@ -34,7 +34,8 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export FOX_VARIANT="A14"
+    export OF_MAINTAINER=kelvinchinedu
+    export FOX_VARIANT="A14"
 	export OF_USE_GREEN_LED=0
     export FOX_ENABLE_APP_MANAGER=1
     export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
@@ -48,7 +49,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
-	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
+	export OF_KEEP_DM_VERITY=1
+        export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 	export OF_NO_MIUI_PATCH_WARNING=1
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
@@ -57,8 +59,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 	export FOX_USE_NANO_EDITOR=1
-        #export OF_QUICK_BACKUP_LIST="/boot;/data;"
-        export OF_QUICK_BACKUP_LIST="/boot;/super;"
+        #export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata"
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
         # export OF_FLASHLIGHT_ENABLE=1
@@ -85,7 +86,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	export OF_UNBIND_SDCARD_F2FS=1
 
-	# instruct magiskboot v24+ to always patch the vbmeta header when patching the recovery/boot image; do *not* remove!
+	# instruct magiskboot v26+ to always patch the vbmeta header when patching the recovery/boot image; do *not* remove!
         export OF_PATCH_VBMETA_FLAG="1"
 
 	# no special MIUI stuff
