@@ -57,14 +57,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 	export FOX_USE_NANO_EDITOR=1
-        #export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata"
+        export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata"
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-        # export OF_FLASHLIGHT_ENABLE=1
-	# export OF_FL_PATH1="/sys/class/leds/lcd-backlight/brightness"
-        # export OF_FL_PATH2="/sys/class/leds/lcd-backlight/device/leds/lcd-backlight/brightness"
+        export OF_FLASHLIGHT_ENABLE=1
+	export OF_FL_PATH1="/sys/class/leds/lcd-backlight/brightness"
+        export OF_FL_PATH2="/sys/class/leds/lcd-backlight/device/leds/lcd-backlight/brightness"
 
-       # -- add settings for build version --
+       # Add settings for build version --
        export FOX_VERSION="OFOX-12.1"
        export OF_MAINTAINER="Kelvin"
        export FOX_BUILD_TYPE="Unofficial"
@@ -79,7 +79,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-	# screen settings
+	
+        # screen settings
 	export OF_SCREEN_H=2400
 	export OF_STATUS_H=100
 	export OF_STATUS_INDENT_LEFT=48
