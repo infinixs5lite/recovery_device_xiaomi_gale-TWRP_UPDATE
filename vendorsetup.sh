@@ -34,8 +34,6 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-    export OF_MAINTAINER=kelvinchinedu
-    export FOX_VARIANT="A14"
 	export OF_USE_GREEN_LED=0
     export FOX_ENABLE_APP_MANAGER=1
     export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
@@ -65,7 +63,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # export OF_FLASHLIGHT_ENABLE=1
 	# export OF_FL_PATH1="/sys/class/leds/lcd-backlight/brightness"
         # export OF_FL_PATH2="/sys/class/leds/lcd-backlight/device/leds/lcd-backlight/brightness"
-       
+
+       # -- add settings for build version --
+       export FOX_VERSION="OFOX-12.1"
+       export OF_MAINTAINER="Kelvin"
+       export FOX_BUILD_TYPE="Unofficial"
+    
 	# use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
     
