@@ -63,8 +63,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
         # export OF_FLASHLIGHT_ENABLE=1
-	# export OF_FL_PATH=/sys/class/flashlight
-	
+	# export OF_FL_PATH1="/sys/class/leds/flashlight/brightness"
+        
+        # use system (ROM) fingerprint where available
+        export OF_USE_SYSTEM_FINGERPRINT=1
+    
         # use magisk 27.0 for the magisk addon
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.0.zip
 
