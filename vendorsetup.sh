@@ -57,18 +57,16 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 	export FOX_USE_NANO_EDITOR=1
-        export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata"
+      # export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata"
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
         export OF_FLASHLIGHT_ENABLE=1
-	export OF_FL_PATH1="/sys/class/leds/lcd-backlight/brightness"
-        export OF_FL_PATH2="/sys/class/leds/flashlight"
-
-       # Add settings for build version --
-       # export FOX_VERSION="OFOX-12.1"
-       #  export OF_MAINTAINER="Kelvin"
-       #  export FOX_MAINTAINER="Kelvin"
-       # export FOX_BUILD_TYPE="beta"
+	export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+ 
+        #  Add settings for build version --
+        export FOX_VERSION="OFOX-12.1"
+        export OF_MAINTAINER="Kelvin"
+        export FOX_BUILD_TYPE="unofficial"
     
 	# use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
