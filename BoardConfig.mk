@@ -186,6 +186,12 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 
+# Treble
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+
+# Maintainer Flags
+MAINTAINER := 'kelvin'
+
 # Disable AVB2.0
-PB_DISABLE_DEFAULT_PATCH_AVB2 := true
-PB_TORCH_PATH := "/sys/class/leds/flashlight"
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/"
