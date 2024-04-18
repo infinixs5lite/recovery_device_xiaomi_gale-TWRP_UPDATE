@@ -192,6 +192,11 @@ PB_DISABLE_DEFAULT_TREBLE_COMP := true
 # Maintainer Flags
 MAINTAINER := 'kelvin'
 
-# Disable AVB2.0
+# Treble
 PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/"
+
+# Torch
+PB_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+
+# Disable AVB2.0
+PB_DISABLE_DEFAULT_PATCH_AVB2 := true
