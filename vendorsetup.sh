@@ -65,9 +65,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_FL_PATH2="/sys/class/leds/flashlight"
 
        # Add settings for build version --
-       export FOX_VERSION="OFOX-12.1"
-       export OF_MAINTAINER="Kelvin"
-       export FOX_BUILD_TYPE="Unofficial"
+       # export FOX_VERSION="OFOX-12.1"
+       #  export OF_MAINTAINER="Kelvin"
+       #  export FOX_MAINTAINER="Kelvin"
+       # export FOX_BUILD_TYPE="beta"
     
 	# use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
