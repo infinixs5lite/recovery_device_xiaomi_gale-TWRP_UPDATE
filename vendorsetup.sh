@@ -35,8 +35,8 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_GREEN_LED=0
-    export FOX_ENABLE_APP_MANAGER=1
-    export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
+        export FOX_ENABLE_APP_MANAGER=1
+        export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
    	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
@@ -57,11 +57,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 	export FOX_USE_NANO_EDITOR=1
-      # export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata"
+        # export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata;"
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-        export OF_FLASHLIGHT_ENABLE=1
-	export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+        export OF_FLASHLIGHT_ENABLE=0
+	# export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness"
  
         #  Add settings for build version --
         export FOX_VERSION="OFOX-12.1"
@@ -99,8 +99,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# no special MIUI stuff
         export OF_VANILLA_BUILD=1
 
-
-	# full size
+        # full size
 	export OF_DYNAMIC_FULL_SIZE=9126805504
 
 	# let's see what are our build VARs
