@@ -1,0 +1,41 @@
+env:
+    OEM: xiaomi 
+    CODENAME: gale
+    CIRRUS_CI: true
+    CIRRUS_SHELL: bash
+    TARGET: bootimage
+    CR_NAME: SKYHAWK RECOVERY
+    USERNAME: infinixs5lite
+    USERMAIL: kelvinchinedu97@gmail.com
+    CR_REPO: https://github.com/SHRP/manifest.git
+    CR_BRANCH: shrp-12.1
+    DT_REPO: https://github.com/infinixs5lite/recovery_device_xiaomi_gale-TWRP_UPDATE
+    DT_BRANCH: SHRP
+    
+task:
+  name: "Recovery Build"
+  timeout_in: 240m
+  trigger_type: manual
+  container:
+      image: ghcr.io/sanju0910/ubuntu:latest
+      cpu: 8
+      memory: 32G
+      
+  CLONE_SCRIPT_script: |
+    if [ -z "$CIRRUS_PR" ]; then
+      git clone --recursive --branch=$CIRRUS_BRANCH https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
+      git reset --hard $CIRRUS_CHANGE_IN_REPO
+    else
+      git clone --recursive https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
+      git fetch origin pull/$CIRRUS_PR/head:pull/$CIRRUS_PR
+      git reset --hard $CIRRUS_CHANGE_IN_REPO
+    fi
+
+  SYNC_SCRIPT_script:
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/sync.sh | bash
+      
+  BUILD_SCRIPT_script:
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/build.sh | bash
+      
+  UPLOAD_SCRIPT_script:
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/upload.sh | bash
