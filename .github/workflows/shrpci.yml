@@ -6,7 +6,7 @@ on:
         description: 'set true if you wanna push Official Build'
         required: false
 env:
-  MANIFEST: "https://github.com/SHRP/manifest.git -b v3_11.0"
+  MANIFEST: "https://github.com/SHRP/manifest.git -b shrp-12.1"
   # Recovery Manifest URL with -b branch
   DT_LINK: "https://github.com/infinixs5lite/recovery_device_xiaomi_gale-TWRP_UPDATE"
   # Your Device Tree Link
