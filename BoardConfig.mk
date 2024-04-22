@@ -230,6 +230,7 @@ SHRP_REC := no_recovery_partition
 # Put 0 to disable flashlight
 SHRP_FLASH := 1
 SHRP_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+SHRP_SKIP_COMPATIBILITY_CHECK := true
 
 #SHRP Addons
 SHRP_EXTERNAL_ADDON_PATH := "device/xiaomi/gale/addon/"
