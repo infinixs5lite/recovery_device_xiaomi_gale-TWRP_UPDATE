@@ -31,6 +31,8 @@ cc_library_shared {
     shared_libs: [
         "liblog",
         "libhidlbase",
+        "libfs_mgr",
+        "libfscrypttwrp",
         "libhardware",
         "libutils",
         "android.hardware.boot@1.0",
