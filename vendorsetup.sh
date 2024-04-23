@@ -34,7 +34,6 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export OF_USE_GREEN_LED=0
         export FOX_ENABLE_APP_MANAGER=1
         export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
    	export TW_DEFAULT_LANGUAGE="en"
@@ -61,20 +60,23 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata;"
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-        export OF_FLASHLIGHT_ENABLE=1
+       
+	# flashlight 
+	export OF_USE_GREEN_LED=0
+	export OF_FLASHLIGHT_ENABLE=0
 	export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness"
  
-        #  Add settings for build version --
-        export FOX_VERSION="OFOX-12.1"
+        #  R11.1 Settings
         export OF_MAINTAINER="Kelvin"
         export FOX_BUILD_TYPE="unofficial"
-    
+        export FOX_VERSION="R11.1_5"
+	
 	# use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
     
         # use magisk 27.0 for the magisk addon
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.0.zip
-
+        # export MAGISK_VER=27.0
         export OF_KEEP_DM_VERITY=1
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
@@ -87,6 +89,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_RIGHT=48
   	export OF_HIDE_NOTCH=1
 	export OF_CLOCK_POS=1
+        export OF_DEFAULT_TIMEZONE="WAT"
 
 	# maximum permissible splash image size (in kilobytes)
 	#export OF_SPLASH_MAX_SIZE=2048
