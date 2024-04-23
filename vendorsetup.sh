@@ -57,10 +57,13 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_ENABLE_LPTOOLS=1
 	export OF_ENABLE_QUICK_REBOOT=1
         export FOX_USE_NANO_EDITOR=1
-        export OF_QUICK_BACKUP_LIST="/boot;/data;/vendor_boot;/super;/persist;/nvram;/nvdata;"
-        export FOX_DELETE_AROMAFM=1
+        export OF_QUICK_BACKUP_LIST
+	export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
        
+       # Quick Backup list
+        export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
+         
 	# flashlight 
 	export OF_USE_GREEN_LED=0
 	export OF_FLASHLIGHT_ENABLE=0
@@ -69,14 +72,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         #  R11.1 Settings
         export OF_MAINTAINER="Kelvin"
         export FOX_BUILD_TYPE="unofficial"
-        export FOX_VERSION="R11.1_5"
-	
+        export FOX_VERSION="R12.1"
+	export BUILD_USERNAME="kelvinchinedu"
+ 
 	# use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
     
         # use magisk 27.0 for the magisk addon
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.0.zip
-        # export MAGISK_VER=27.0
+        export MAGISK_VER=27.0
         export OF_KEEP_DM_VERITY=1
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
