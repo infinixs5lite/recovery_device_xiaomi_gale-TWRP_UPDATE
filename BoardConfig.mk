@@ -142,6 +142,13 @@ TW_FRAMERATE := 90
 TW_EXCLUDE_APEX := true
 TW_DEVICE_VERSION := KELVIN_A14
 
+# Device 
+PB_DEVICE_VERSION := KELVIN_A14
+
+# Python
+PB_INCLUDE_PYTHON := true
+TW_INCLUDE_PYTHON := true
+
 # Brightness Screen
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
