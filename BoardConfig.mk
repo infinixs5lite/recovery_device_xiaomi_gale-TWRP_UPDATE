@@ -142,6 +142,9 @@ TW_FRAMERATE := 90
 TW_EXCLUDE_APEX := true
 TW_ENABLE_QUICK_REBOOT := true
 
+# Python
+TW_INCLUDE_PYTHON := true
+
 # Brightness Screen
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
