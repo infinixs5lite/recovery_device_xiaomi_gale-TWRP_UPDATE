@@ -145,6 +145,9 @@ TW_INCLUDE_NANO_EDITOR := true
 TW_INCLUDE_NANO := true
 TW_INCLUDE_TWRPAPP := true
 
+# Allows you to map a custom keycode for power button, takes in a number, usually three digits
+TW_CUSTOM_POWER_BUTTON := 107
+
 # Python
 TW_INCLUDE_PYTHON := true
 
