@@ -18,6 +18,7 @@
 # 	Please maintain this if you use this script or any part of it
 #
 FDEVICE="gale"
+#set -o xtrace
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w \"$FDEVICE\")
