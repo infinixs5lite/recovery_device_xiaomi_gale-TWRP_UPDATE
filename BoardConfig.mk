@@ -144,6 +144,9 @@ TW_ENABLE_QUICK_REBOOT := true
 TW_INCLUDE_NANO_EDITOR := true
 TW_INCLUDE_NANO := true
 TW_INCLUDE_TWRPAPP := true
+TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
+TW_DEVICE_VERSION := NINO
+TW_BATTERY_SYSFS_WAIT_SECONDS := 4
 
 # Allows you to map a custom keycode for power button, takes in a number, usually three digits
 TW_CUSTOM_POWER_BUTTON := 107
@@ -194,6 +197,3 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 # Libresetprop & resetprop
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
-
-# Maintainer
-TW_DEVICE_VERSION := KELVIN_A14
