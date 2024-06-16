@@ -156,7 +156,7 @@ TARGET_SCREEN_RATIO := 19:9
 TW_SCREEN_RATIO := 19:9
 ENABLE_SCHEDBOOST := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
-
+TW_DEVICE_VERSION := Chinedu 
 # Allows you to map a custom keycode for power button, takes in a number, usually three digits
 TW_CUSTOM_POWER_BUTTON := 107
 
