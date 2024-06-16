@@ -132,7 +132,8 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # TWRP Configuration
-TW_THEME := portrait_hdpi
+##  TW_THEME := portrait_hdpi
+## 720x1280 800x1280 1080x1920 1200x1920 1440x2560 1600x2560
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -145,8 +146,22 @@ TW_INCLUDE_NANO_EDITOR := true
 TW_INCLUDE_NANO := true
 TW_INCLUDE_TWRPAPP := true
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
-TW_DEVICE_VERSION := NINO
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_BATTERY_SYSFS_WAIT_SECONDS := 4
+TW_FORCE_CPUINFO_FOR_DEVICE_ID := true
+TW_THEME := landscape_mdpi
+# 1280x800 1920x1200 2560x1600
+## TW_THEME := portrait_hdpi
+## 800x480 1024x600 1024x768
+
+# swap x anf y axis for touch
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+
+# flip x axis for touch
+RECOVERY_TOUCHSCREEN_FLIP_X := true
+
+# flip y axis for touch,
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
 
 # Allows you to map a custom keycode for power button, takes in a number, usually three digits
 TW_CUSTOM_POWER_BUTTON := 107
