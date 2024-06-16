@@ -148,20 +148,12 @@ TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_BATTERY_SYSFS_WAIT_SECONDS := 4
 TW_FORCE_CPUINFO_FOR_DEVICE_ID := true
-TW_THEME := landscape_mdpi
-# 1600x720
-# TW_THEME := portrait_hdpi
-# 720x1600
+TW_THEME := portrait_hdpi
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1600
+DEVICE_RESOLUTION := 720x1600
 ENABLE_SCHEDBOOST := true
-
-# swap x anf y axis for touch
-RECOVERY_TOUCHSCREEN_SWAP_XY := true
-
-# flip x axis for touch
-RECOVERY_TOUCHSCREEN_FLIP_X := true
-
-# flip y axis for touch,
-RECOVERY_TOUCHSCREEN_FLIP_Y := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
 
 # Allows you to map a custom keycode for power button, takes in a number, usually three digits
 TW_CUSTOM_POWER_BUTTON := 107
