@@ -153,6 +153,7 @@ TW_THEME := landscape_mdpi
 # 1280x800 1920x1200 2560x1600
 ## TW_THEME := portrait_hdpi
 ## 800x480 1024x600 1024x768
+ENABLE_SCHEDBOOST := true
 
 # swap x anf y axis for touch
 RECOVERY_TOUCHSCREEN_SWAP_XY := true
