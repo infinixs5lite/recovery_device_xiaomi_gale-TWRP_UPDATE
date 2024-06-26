@@ -206,3 +206,9 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 # Libresetprop & resetprop
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
+
+# Installer
+AB_OTA_UPDATER := true
+USE_RECOVERY_INSTALLER := true
+RECOVERY_INSTALLER_PATH := $(DEVICE_PATH)/installer
+
