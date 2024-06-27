@@ -170,6 +170,8 @@ TW_HAS_MTP := true
 # Possible supported frequencies: 30, 60, 90, 120
 TW_FRAMERATE := 90
 
+TW_CUSTOM_BATTERY_POS := "790"
+
 # USB OTG
 TW_USB_STORAGE := true
 
