@@ -157,6 +157,13 @@ TW_SCREEN_RATIO := 19:9
 ENABLE_SCHEDBOOST := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
 TW_DEVICE_VERSION := Chinedu 
+
+# Set panel refresh rate to 90 Hertz for smoother experience
+# Possible supported frequencies: 30, 60, 90, 120
+TW_FRAMERATE := 90
+
+TW_CUSTOM_BATTERY_POS := "790"
+
 # Allows you to map a custom keycode for power button, takes in a number, usually three digits
 TW_CUSTOM_POWER_BUTTON := 107
 
