@@ -166,6 +166,10 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_HAS_MTP := true
 
+# Set panel refresh rate to 90 Hertz for smoother experience
+# Possible supported frequencies: 30, 60, 90, 120
+TW_FRAMERATE := 90
+
 # USB OTG
 TW_USB_STORAGE := true
 
