@@ -104,6 +104,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
+# wipe
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/system/etc/recovery.wipe
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_VBMETA_SYSTEM := system product
