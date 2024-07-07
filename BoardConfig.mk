@@ -143,6 +143,9 @@ TW_EXCLUDE_APEX := true
 TW_DEVICE_VERSION := KELVIN_A14
 TW_INCLUDE_NANO_EDITOR := true
 TW_INCLUDE_NANO := true
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CPU_POS := "50"
+TW_CUSTOM_CLOCK_POS := "290"
 
 # Nano 
 PB_INCLUDE_NANO := true
@@ -169,8 +172,6 @@ TW_HAS_MTP := true
 # Set panel refresh rate to 90 Hertz for smoother experience
 # Possible supported frequencies: 30, 60, 90, 120
 TW_FRAMERATE := 90
-
-TW_CUSTOM_BATTERY_POS := "790"
 
 # USB OTG
 TW_USB_STORAGE := true
