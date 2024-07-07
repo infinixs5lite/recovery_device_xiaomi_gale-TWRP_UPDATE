@@ -147,9 +147,8 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_FRAMERATE := 90
 TW_EXCLUDE_APEX := true
-TW_HIDE_NOTCH := true
+TW_ENABLE_NOTCH := true
 TW_ENABLE_QUICK_REBOOT := true
 TW_INCLUDE_NANO_EDITOR := true
 TW_INCLUDE_NANO := true
@@ -166,6 +165,9 @@ TARGET_SCREEN_RATIO := 19:9
 TW_SCREEN_RATIO := 19:9
 ENABLE_SCHEDBOOST := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
+TW_STATUS_ICONS_ALIGN := left
+TW_CUSTOM_CPU_POS := "50"
+TW_CUSTOM_CLOCK_POS := "290"
 
 # Set panel refresh rate to 90 Hertz for smoother experience
 # Possible supported frequencies: 30, 60, 90, 120
