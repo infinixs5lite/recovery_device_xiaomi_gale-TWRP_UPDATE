@@ -56,18 +56,18 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_ENABLE_LPTOOLS=1
 	export OF_ENABLE_QUICK_REBOOT=1
         export FOX_USE_NANO_EDITOR=1
-        export OF_QUICK_BACKUP_LIST
 	export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-        export FOX_R12=1
 	
        # Quick Backup list
-        export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
+       export OF_QUICK_BACKUP_LIST=1
+       export FOX_QUICK_BACKUP_LIST=1
+       export OF_QUICK_BACKUP_LIST="/boot;/data;/persist;/super;"
        
-	# Flashlight paths configurations
-        export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness
-        export OF_FL_PATH2=""
-        export OF_FLASHLIGHT_ENABLE=1
+       # Flashlight paths configurations
+       export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+       export OF_FL_PATH2=""
+       export OF_FLASHLIGHT_ENABLE=1
     
        # Color codes for terminal output
        RED_BACK="\e[101m"
