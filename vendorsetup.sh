@@ -37,9 +37,7 @@ fi
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_ENABLE_APP_MANAGER=1
         export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
-   	export TW_DEFAULT_LANGUAGE="en"
-	export LC_ALL="C"
- 	export ALLOW_MISSING_DEPENDENCIES=true
+   	export TW_DEFAULT_LANGUAGE="en_US"
 	export TARGET_DEVICE_ALT="gale"
 	export OF_TARGET_DEVICES="gale"
 	export OF_VIRTUAL_AB_DEVICE=1
@@ -65,17 +63,28 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
        # Quick Backup list
         export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
-         
-	# flashlight 
-	export OF_USE_GREEN_LED=0
-	export OF_FLASHLIGHT_ENABLE=0
-	export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness"
- 
-        #  R11.1 Settings
-        export OF_MAINTAINER="Kelvin"
-        export FOX_BUILD_TYPE="unofficial"
-        export FOX_VERSION="R12.1"
-	export BUILD_USERNAME="kelvinchinedu"
+       
+	# Flashlight paths configurations
+        export OF_FL_PATH1="/sys/devices/platform/flashlights_ocp8132/torch_brightness
+        export OF_FL_PATH2=""
+        export OF_FLASHLIGHT_ENABLE=1
+    
+       # Color codes for terminal output
+       RED_BACK="\e[101m"
+       RED="\e[91m"
+       RESET="\e[0m"
+       GREEN="\e[92m"
+
+       # Important build settings
+       export ALLOW_MISSING_DEPENDENCIES=true
+       export LC_ALL="C"
+
+       # General configurations
+       echo "General Configurations"
+       export OF_MAINTAINER="NINO"
+       export FOX_BUILD_TYPE="Stable"
+       export FOX_VERSION="R12.1_57"
+       export FOX_VARIANT="AOSP"
  
 	# use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
