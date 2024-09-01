@@ -24,7 +24,6 @@ AB_OTA_PARTITIONS += \
     boot \
     vbmeta_vendor \
     vbmeta_system
-BOARD_USES_RECOVERY_AS_BOOT := 
 
 # Architecture
 TARGET_ARCH := arm64
@@ -49,7 +48,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 440
 
 # Kernel
-TARGET_NO_KERNEL := true
+TARGET_NO_KERNEL := false
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
@@ -92,27 +91,22 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor produ
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 7516192768
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6769Z
+TARGET_BOARD_PLATFORM := mt6768
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gale,gust
 
-# Recovery 
+TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+
+# Recovery
+BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Vendor_boot recovery ramdisk
-BOARD_USES_GENERIC_KERNEL_IMAGE := true
-BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := 
-BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := 
-
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
-
-# wipe
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/system/etc/recovery.wipe
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -141,13 +135,6 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
-# Build Flags
-TW_MAINTAINER := kelvin
-TW_DEVICE_VERSION := V14
-RECOVERY_VARIANT := twrp-12.1
-ALLOW_MISSING_DEPENDENCIES := true
-LC_ALL := "C"
-
 # TWRP Configuration
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -175,15 +162,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
 TW_STATUS_ICONS_ALIGN := left
 TW_CUSTOM_CPU_POS := "50"
 TW_CUSTOM_CLOCK_POS := "290"
-
-# Set panel refresh rate to 90 Hertz for smoother experience
-# Possible supported frequencies: 30, 60, 90, 120
-TW_FRAMERATE := 90
-
-TW_CUSTOM_BATTERY_POS := "790"
-
-# Allows you to map a custom keycode for power button, takes in a number, usually three digits
-TW_CUSTOM_POWER_BUTTON := 107
+#TWRP_EVENT_LOGGING := true
 
 # Python
 TW_INCLUDE_PYTHON := true
@@ -191,13 +170,17 @@ TW_INCLUDE_PYTHON := true
 # Brightness Screen
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
+TW_MAX_BRIGHTNESS := 4000
 TW_DEFAULT_BRIGHTNESS := 1200
 
 # USB Configuration
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_HAS_MTP := true
+
+# Set panel refresh rate to 90 Hertz for smoother experience
+# Possible supported frequencies: 30, 60, 90, 120
+TW_FRAMERATE := 90
 
 # USB OTG
 TW_USB_STORAGE := true
@@ -231,9 +214,3 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 # Libresetprop & resetprop
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
-
-# Installer
-AB_OTA_UPDATER := true
-USE_RECOVERY_INSTALLER := true
-RECOVERY_INSTALLER_PATH := $(DEVICE_PATH)/installer
-
