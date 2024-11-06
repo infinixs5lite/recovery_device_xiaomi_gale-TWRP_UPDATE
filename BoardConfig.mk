@@ -172,6 +172,9 @@ TARGET_USES_MKE2FS := true
 # FastbootD
 TW_INCLUDE_FASTBOOTD := true
 
+# TWRP (Refresh Rate)
+TW_FRAMERATE := 90
+
 # Fuse
 TW_INCLUDE_NTFS_3G    := true
 TW_INCLUDE_FUSE_EXFAT := true
