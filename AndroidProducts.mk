@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_gale.mk
+    $(LOCAL_DIR)/pb_gale.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_gale-eng
+    pb_gale-eng
