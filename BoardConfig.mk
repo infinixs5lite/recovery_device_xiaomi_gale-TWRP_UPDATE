@@ -190,81 +190,25 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 
 #SHRP Prop
-# Official 
-SHRP_OFFICIAL := true
-# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
-# Path of your SHRP Tree
+SHRP_OFFICIAL := false
 SHRP_PATH := device/xiaomi/gale
-# Maintainer name *
 SHRP_MAINTAINER := nino
-# Device codename *
 SHRP_DEVICE_CODE := gale
-# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
 SHRP_REC_TYPE := Treble
-# Recovery Type (It can be A/B or A_only) [Only for About Section] *
 SHRP_DEVICE_TYPE := A/B
-# SHRP Padding Flag (Only for rounded corner devices.) [Optional]
-# You have to change these values according to your device's roundness.
 SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
-# For Notch devices [Optional]
 SHRP_NOTCH := true
-# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock [Optional]
 SHRP_EXPRESS := true
-# SHRP Dark mode, use this flag to have dark theme set by default [Optional]
 SHRP_DARK := true
-# put this 0 if device has no EDL mode *
 SHRP_EDL_MODE := 0
-# Put your device's paths from fstab *
 SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
-# Put 0 to disable flashlight *
 SHRP_FLASH := 1
-# Max Brightness of LED [Optional]
-SHRP_FLASH_MAX_BRIGHTNESS := 200
-# Use this flag only if your device is A/B *
+SHRP_FLASH_MAX_BRIGHTNESS := 1000
 SHRP_AB := true
-# Check your device's recovery path, dont use blindly
 SHRP_REC := no_recovery_partition 
-# Put 0 to disable flashlight
 SHRP_FLASH := 1
 SHRP_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/torch_brightness"
 SHRP_SKIP_COMPATIBILITY_CHECK := true
-
-#SHRP Addons
-SHRP_EXTERNAL_ADDON_PATH := "device/xiaomi/gale/addon/"
-SHRP_EXTERNAL_ADDON_1_NAME := "[MAGISK] Safetynet Fix"
-SHRP_EXTERNAL_ADDON_1_INFO := "A magisk module which attempts to fix Safetynet"
-SHRP_EXTERNAL_ADDON_1_FILENAME := "safetynet-fix.zip"
-SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Flash"
-SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Flashed Successfully"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
-SHRP_EXTERNAL_ADDON_2_NAME := "[MAGISK] Blur Enabler"
-SHRP_EXTERNAL_ADDON_2_INFO := "A magisk module which Enables Blur in System"
-SHRP_EXTERNAL_ADDON_2_FILENAME := "blur-enabler.zip"
-SHRP_EXTERNAL_ADDON_2_BTN_TEXT := "Install"
-SHRP_EXTERNAL_ADDON_2_SUCCESSFUL_TEXT := "Installed"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_2 := true
-SHRP_EXTERNAL_ADDON_3_NAME := "[MAGISK] Nav-Bar Space Remover"
-SHRP_EXTERNAL_ADDON_3_INFO := "Removes Space Under Keyboard"
-SHRP_EXTERNAL_ADDON_3_FILENAME := "navbareliminator.zip"
-SHRP_EXTERNAL_ADDON_3_BTN_TEXT := "Install"
-SHRP_EXTERNAL_ADDON_3_SUCCESSFUL_TEXT := "Installed"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_3 := true
-SHRP_EXTERNAL_ADDON_4_NAME := "Imei Backup"
-SHRP_EXTERNAL_ADDON_4_INFO := "Takes Imei backup"
-SHRP_EXTERNAL_ADDON_4_FILENAME := "Imei-Backup.zip"
-SHRP_EXTERNAL_ADDON_4_BTN_TEXT := "Flash"
-SHRP_EXTERNAL_ADDON_4_SUCCESSFUL_TEXT := "Flashed Successfully"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_4 := true
-SHRP_EXTERNAL_ADDON_5_NAME := "Unlock Logo Remover"
-SHRP_EXTERNAL_ADDON_5_INFO := "Removes Unlock Logo on Redmi Splash Screen"
-SHRP_EXTERNAL_ADDON_5_FILENAME := "Unlock-Logo-Remover.zip"
-SHRP_EXTERNAL_ADDON_5_BTN_TEXT := "Flash"
-SHRP_EXTERNAL_ADDON_5_SUCCESSFUL_TEXT := "Flashed Successfully"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_5 := true
-INC_IN_REC_ADDON_1 := true
-INC_IN_REC_ADDON_2 := true
-INC_IN_REC_ADDON_3 := true
-INC_IN_REC_ADDON_4 := true
